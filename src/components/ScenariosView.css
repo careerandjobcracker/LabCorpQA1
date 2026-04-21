@@ -1,0 +1,135 @@
+.scenarios-view {
+  animation: fadeIn 200ms ease;
+}
+
+.scenarios-view .view-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.clear-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 14px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.clear-filter-btn:hover {
+  background: var(--color-error-50);
+  color: var(--color-error-600);
+  border-color: var(--color-error-100);
+}
+
+.scenarios-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.scenario-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  border-left: 3px solid var(--color-border);
+  transition: box-shadow var(--transition-fast);
+}
+
+.scenario-card:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.scenario-passed {
+  border-left-color: var(--color-success-500);
+}
+
+.scenario-failed {
+  border-left-color: var(--color-error-500);
+}
+
+.scenario-skipped {
+  border-left-color: var(--color-warning-500);
+}
+
+.scenario-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.scenario-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin-bottom: 3px;
+}
+
+.scenario-feature {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.scenario-card-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.scenario-duration {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.scenario-tags {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  color: var(--color-text-muted);
+}
+
+.scenario-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--color-neutral-50);
+  color: var(--color-text-secondary);
+  font-size: 0.6875rem;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+.scenario-error {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: var(--color-error-50);
+  border-radius: var(--radius-md);
+  color: var(--color-error-700);
+}
+
+.scenario-error svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.scenario-error pre {
+  font-size: 0.75rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+}

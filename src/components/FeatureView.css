@@ -1,0 +1,165 @@
+.feature-view {
+  animation: fadeIn 200ms ease;
+}
+
+.feature-meta-grid {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.feature-meta-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.meta-label {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.meta-value {
+  font-size: 0.8125rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.meta-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.meta-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--color-primary-50);
+  color: var(--color-primary-700);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+.feature-code-container {
+  background: var(--color-neutral-900);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.feature-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.feature-filename {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+}
+
+.feature-lines {
+  font-size: 0.6875rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.feature-code {
+  margin: 0;
+  padding: 16px 0;
+  overflow-x: auto;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+
+.code-line {
+  display: flex;
+  padding: 0 20px;
+  transition: background 100ms ease;
+}
+
+.code-line:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.line-number {
+  display: inline-block;
+  width: 40px;
+  text-align: right;
+  margin-right: 20px;
+  color: rgba(255, 255, 255, 0.15);
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.line-content {
+  white-space: pre;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.gherkin-tag .line-content {
+  color: #5cb8f0;
+}
+
+.gherkin-feature .line-content {
+  color: #e8b84a;
+  font-weight: 600;
+}
+
+.gherkin-scenario .line-content {
+  color: #e8b84a;
+  font-weight: 500;
+}
+
+.gherkin-background .line-content {
+  color: #e8b84a;
+}
+
+.gherkin-comment .line-content {
+  color: rgba(255, 255, 255, 0.2);
+  font-style: italic;
+}
+
+.gherkin-keyword .line-content {
+  color: #6ec96e;
+}
+
+.gherkin-narrative .line-content {
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
+}
+
+.gherkin-string {
+  color: #e89b5c;
+}
+
+@media (max-width: 1024px) {
+  .feature-meta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .feature-code {
+    font-size: 0.6875rem;
+  }
+
+  .line-number {
+    width: 28px;
+    margin-right: 12px;
+  }
+}

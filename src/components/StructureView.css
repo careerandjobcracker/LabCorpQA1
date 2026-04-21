@@ -1,0 +1,133 @@
+.structure-view {
+  animation: fadeIn 200ms ease;
+}
+
+.structure-info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.info-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+}
+
+.info-card h4 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.info-card p {
+  font-size: 0.8125rem;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+}
+
+.tree-container {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 16px 0;
+  overflow-x: auto;
+}
+
+.tree-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 5px 16px;
+  font-size: 0.8125rem;
+  min-height: 32px;
+  width: 100%;
+  text-align: left;
+}
+
+.tree-folder {
+  cursor: pointer;
+  color: var(--color-text-secondary);
+  transition: background var(--transition-fast);
+  border-radius: 0;
+}
+
+.tree-folder:hover {
+  background: var(--color-surface-hover);
+}
+
+.tree-folder svg:first-child {
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.tree-icon-folder {
+  color: var(--color-warning-500);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.tree-folder-name {
+  font-weight: 500;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+}
+
+.tree-folder-desc {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  margin-left: 6px;
+  white-space: nowrap;
+}
+
+.tree-file {
+  color: var(--color-text-secondary);
+}
+
+.tree-icon-java {
+  color: var(--color-error-500);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.tree-icon-file {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.tree-file-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.tree-file-name {
+  font-size: 0.8125rem;
+  color: var(--color-text-primary);
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: 0.75rem;
+}
+
+.tree-file-desc {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.tree-children {
+  /* No additional padding needed; handled by depth parameter */
+}
+
+@media (max-width: 1024px) {
+  .structure-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
