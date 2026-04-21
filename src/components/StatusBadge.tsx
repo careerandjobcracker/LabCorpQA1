@@ -1,4 +1,4 @@
-import { CheckCircle2, XCircle, SkipForward, Clock, Loader2 } from 'lucide-react'
+import { CircleCheck as CheckCircle2, Circle as XCircle, SkipForward, Clock, Loader as Loader2 } from 'lucide-react'
 import './StatusBadge.css'
 
 interface StatusBadgeProps {
