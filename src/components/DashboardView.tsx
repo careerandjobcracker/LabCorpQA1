@@ -1,4 +1,4 @@
-import { CheckCircle2, XCircle, SkipForward, Clock, TrendingUp, Eye } from 'lucide-react'
+import { CircleCheck as CheckCircle2, Circle as XCircle, SkipForward, Clock, TrendingUp, Eye } from 'lucide-react'
 import type { TestRun, TestScenario } from '../types'
 import { StatusBadge } from './StatusBadge'
 import { formatDuration, formatTimeAgo } from '../utils'

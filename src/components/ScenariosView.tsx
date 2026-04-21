@@ -1,4 +1,4 @@
-import { X, AlertTriangle, Tag } from 'lucide-react'
+import { X, TriangleAlert as AlertTriangle, Tag } from 'lucide-react'
 import type { TestRun, TestScenario } from '../types'
 import { StatusBadge } from './StatusBadge'
 import { formatDuration } from '../utils'
